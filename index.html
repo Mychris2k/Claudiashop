@@ -3,25 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Claudia Shop - Boutique en ligne</title>
+    <title>ClaudiaShop - Boutique en ligne</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Bienvenue sur Claudia Shop</h1>
-        <nav>
-            <a href="#produits">Produits</a>
-            <a href="#panier">Panier</a>
-        </nav>
+        <h1>ClaudiaShop</h1>
+        <input type="text" id="search-input" placeholder="Rechercher un produit..." onkeyup="searchProducts()">
     </header>
-    <section id="produits">
-        <h2>Nos Produits</h2>
-        <!-- Ajouter des produits ici -->
-    </section>
-    <section id="panier">
-        <h2>Mon Panier</h2>
-        <!-- Afficher le contenu du panier ici -->
-    </section>
+
+    <main>
+        <!-- Liste des produits -->
+        <div id="product-list" class="product-list"></div>
+    </main>
+
+    <!-- Modale de détails du produit -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close">&times;</span>
+            <h2 id="product-name-modal"></h2>
+            <img id="product-image-modal" src="" alt="Image du produit">
+            <p id="product-description-modal"></p>
+            <span id="product-price-modal"></span>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
